@@ -1,20 +1,24 @@
-import Promo from '../components/Promo'
-import Problem from '../components/Problem'
-import HowItWorks from '../components/HowItWorks'
-import Audience from '../components/Audience'
-import Features from '../components/Features'
-import Pricing from '../components/Pricing'
-import Testimonials from '../components/Testimonials'
-
 export default function Home() {
   return (
-    <div className="relative min-h-screen">
-      <img
-        src="/etactics-inc-nQ7bzOlfbRA-unsplash.jpg"
-        alt="background pills"
-        className="fixed inset-0 w-full h-full object-cover z-0 brightness-75"
-        style={{pointerEvents: 'none'}}
-      />
+    <div className="relative min-h-screen overflow-hidden bg-gray-50">
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-0 flex">
+        <img
+          src="/andrii-leonov-LuH7CGBqRhw-unsplash.jpg"
+          alt="Capsule background"
+          className="w-1/3 h-full object-cover opacity-60"
+        />
+        <img
+          src="/christine-sandu-jwWtZrm67VI-unsplash.jpg"
+          alt="Blisters background"
+          className="w-1/3 h-full object-cover opacity-60"
+        />
+        <img
+          src="/etactics-inc-nQ7bzOlfbRA-unsplash.jpg"
+          alt="Pills background"
+          className="w-1/3 h-full object-cover opacity-60"
+        />
+      </div>
+
       <div className="relative z-10">
         <Promo />
         <Problem />
@@ -25,5 +29,5 @@ export default function Home() {
         <Testimonials />
       </div>
     </div>
-  )
+  );
 }
