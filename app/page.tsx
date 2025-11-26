@@ -15,17 +15,17 @@ import Media from '../components/Media'
 export default function Home() {
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden">
-      {/* Основной фон — изображение растягивается полностью */}
+      {/* Фоновый слой */}
       <div className="absolute inset-0 w-full h-full -z-10">
         <img
           src="/termometr-s-vysokoi-temperaturoi-i-lekarstvom.jpg"
           alt="Background"
           className="w-full h-full object-cover"
         />
-        {/* Белый overlay делает фон светлее! Поэкспериментируй с bg-opacity: 60-70 */}
-        <div className="absolute inset-0 w-full h-full bg-white bg-opacity-70"></div>
+        {/* Белый overlay — теперь намного прозрачнее! */}
+        <div className="absolute inset-0 w-full h-full bg-white bg-opacity-20"></div>
       </div>
-      {/* Контент лендинга поверх фона */}
+      {/* Контент сайта */}
       <div className="relative z-10 flex flex-col gap-10 w-full max-w-4xl px-4 py-10 mx-auto">
         <Promo />
         <Problem />
