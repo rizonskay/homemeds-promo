@@ -1,32 +1,24 @@
+import Promo from '../components/Promo'
+import SWOT from '../components/SWOT'
+import Constructive from '../components/Constructive'
+import ProsCons from '../components/ProsCons'
+import ReverseSolution from '../components/ReverseSolution'
+
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-gray-50">
-      <div className="absolute inset-0 w-full h-full pointer-events-none z-0 flex">
-        <img
-          src="/andrii-leonov-LuH7CGBqRhw-unsplash.jpg"
-          alt="Capsule background"
-          className="w-1/3 h-full object-cover opacity-60"
-        />
-        <img
-          src="/christine-sandu-jwWtZrm67VI-unsplash.jpg"
-          alt="Blisters background"
-          className="w-1/3 h-full object-cover opacity-60"
-        />
-        <img
-          src="/etactics-inc-nQ7bzOlfbRA-unsplash.jpg"
-          alt="Pills background"
-          className="w-1/3 h-full object-cover opacity-60"
-        />
-      </div>
-
+      {/* Фоновое изображение для всего сайта */}
+      <img
+        src="/termometr-s-vysokoi-temperaturoi-i-lekarstvom.jpg"
+        alt="Medicine and thermometer background"
+        className="fixed inset-0 w-full h-full object-cover opacity-35 blur-sm pointer-events-none z-0"
+      />
       <div className="relative z-10">
         <Promo />
-        <Problem />
-        <HowItWorks />
-        <Audience />
-        <Features />
-        <Pricing />
-        <Testimonials />
+        <SWOT />
+        <Constructive />
+        <ProsCons />
+        <ReverseSolution />
       </div>
     </div>
   );
