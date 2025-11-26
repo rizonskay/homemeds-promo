@@ -15,17 +15,12 @@ import Media from '../components/Media'
 export default function Home() {
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden">
-      {/* Фоновый слой */}
-      <div className="absolute inset-0 w-full h-full -z-10">
-        <img
-          src="/termometr-s-vysokoi-temperaturoi-i-lekarstvom.jpg"
-          alt="Background"
-          className="w-full h-full object-cover"
-        />
-        {/* Белый overlay — теперь намного прозрачнее! */}
-        <div className="absolute inset-0 w-full h-full bg-white bg-opacity-20"></div>
-      </div>
-      {/* Контент сайта */}
+      <img
+        src="/termometr-s-vysokoi-temperaturoi-i-lekarstvom.jpg"
+        alt="Background"
+        className="absolute inset-0 w-full h-full object-cover opacity-18 -z-10"
+        style={{ pointerEvents: 'none' }}
+      />
       <div className="relative z-10 flex flex-col gap-10 w-full max-w-4xl px-4 py-10 mx-auto">
         <Promo />
         <Problem />
