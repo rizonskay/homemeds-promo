@@ -14,19 +14,20 @@ import Media from '../components/Media'
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col items-center overflow-x-hidden">
-      {/* Фон как отдельный div, чтобы точно был внизу */}
-      <div className="absolute inset-0 w-full h-full z-0">
+    <div className="relative min-h-screen w-full overflow-x-hidden">
+      {/* Фоновый слой под контентом: 
+          object-cover — заполняет всю область, не белый фон!
+          opacity-30 — мягко и не мешает тексту.
+      */}
+      <div className="absolute inset-0 w-full h-full -z-10">
         <img
           src="/termometr-s-vysokoi-temperaturoi-i-lekarstvom.jpg"
-          alt="Background image"
-          className="w-full h-full object-cover opacity-40"
+          alt="Background"
+          className="w-full h-full object-cover opacity-30"
         />
-        {/* Можно добавить легкий overlay для затемнения, если фон слишком яркий */}
-        <div className="absolute inset-0 w-full h-full bg-white bg-opacity-20"></div>
       </div>
-      {/* Контент поверх фонового изображения */}
-      <div className="relative z-10 flex flex-col gap-10 w-full max-w-4xl px-4 py-10">
+      {/* Контент-лендинг, карточки полупрозрачные */}
+      <div className="relative z-10 flex flex-col gap-10 w-full max-w-4xl px-4 py-10 mx-auto">
         <Promo />
         <Problem />
         <HowItWorks />
