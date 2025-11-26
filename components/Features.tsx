@@ -1,18 +1,13 @@
 export default function Features() {
   return (
-    <section className="relative py-16 mt-20 max-w-6xl mx-auto rounded-xl shadow-xl overflow-hidden text-center">
-      <img
-        src="/etactics-inc-nQ7bzOlfbRA-unsplash.jpg"
-        alt="Pills background"
-        className="absolute inset-0 w-full h-full object-cover brightness-100"
-        style={{ zIndex: 0 }}
-      />
-      <div className="relative z-10 bg-white bg-opacity-90 rounded-xl px-8 py-12">
-        <h2 className="text-3xl font-bold mb-6 text-green-700">Функции приложения</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Здесь блоки фич, как было раньше */}
-        </div>
-      </div>
+    <section className="py-10 px-6 text-center rounded-2xl shadow-lg bg-white bg-opacity-80 backdrop-blur">
+      <h2 className="text-xl font-bold mb-3 text-gray-700">Описание фич и функций</h2>
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-600">
+        <li>Скан штрих-кода с автоматическим определением деталей лекарства</li>
+        <li>Напоминания о приёмах и необходимости обновить аптечку</li>
+        <li>Семейный режим и профили опеки</li>
+        <li>Рекомендации безопасных аналогов и утилизации</li>
+      </ul>
     </section>
   );
 }

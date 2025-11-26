@@ -1,24 +1,40 @@
 import Promo from '../components/Promo'
-import SWOT from '../components/SWOT'
-import Constructive from '../components/Constructive'
-import ProsCons from '../components/ProsCons'
-import ReverseSolution from '../components/ReverseSolution'
+import Problem from '../components/Problem'
+import HowItWorks from '../components/HowItWorks'
+import Audience from '../components/Audience'
+import Features from '../components/Features'
+import Pricing from '../components/Pricing'
+import Testimonials from '../components/Testimonials'
+import Cases from '../components/Cases'
+import Compare from '../components/Compare'
+import Examples from '../components/Examples'
+import Partners from '../components/Partners'
+import BlogLinks from '../components/BlogLinks'
+import Media from '../components/Media'
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gray-50">
-      {/* Фоновое изображение для всего сайта */}
+    <div className="relative min-h-screen flex flex-col items-center bg-gradient-to-b from-gray-50 via-white to-gray-100 overflow-hidden">
       <img
         src="/termometr-s-vysokoi-temperaturoi-i-lekarstvom.jpg"
-        alt="Medicine and thermometer background"
-        className="fixed inset-0 w-full h-full object-cover opacity-35 blur-sm pointer-events-none z-0"
+        alt="Background"
+        className="absolute inset-0 w-full h-full object-contain opacity-20 pointer-events-none z-0"
+        style={{mixBlendMode:"lighten"}}
       />
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col gap-10 w-full max-w-4xl px-4">
         <Promo />
-        <SWOT />
-        <Constructive />
-        <ProsCons />
-        <ReverseSolution />
+        <Problem />
+        <HowItWorks />
+        <Audience />
+        <Features />
+        <Pricing />
+        <Testimonials />
+        <Cases />
+        <Compare />
+        <Examples />
+        <Partners />
+        <BlogLinks />
+        <Media />
       </div>
     </div>
   );

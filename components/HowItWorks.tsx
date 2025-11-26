@@ -1,15 +1,13 @@
-export default function Problem() {
+export default function HowItWorks() {
   return (
-    <section className="relative py-16 mt-20 max-w-4xl mx-auto rounded-xl shadow-xl overflow-hidden text-center">
-      <img
-        src="/christine-sandu-jwWtZrm67VI-unsplash.jpg"
-        alt="Blisters background"
-        className="absolute inset-0 w-full h-full object-cover brightness-95"
-        style={{ zIndex: 0 }}
-      />
-      <div className="relative z-10 bg-white bg-opacity-90 rounded-xl px-8 py-12">
-        {/* Весь твой контент тут: заголовок, списки, карточки... */}
-      </div>
+    <section className="py-10 px-6 text-center rounded-2xl shadow-lg bg-white bg-opacity-80 backdrop-blur">
+      <h2 className="text-xl font-bold mb-3 text-gray-700">Как это работает?</h2>
+      <ol className="text-left max-w-lg mx-auto list-decimal ml-6 text-gray-600">
+        <li>Сканируйте штрих-код препарата для простого добавления.</li>
+        <li>Получайте напоминания о приёме и покупке новых лекарств.</li>
+        <li>Делитесь расписаниями с семьёй, подтверждайте приёмы.</li>
+        <li>Получайте автоматические рекомендации и подсказки по замене.</li>
+      </ol>
     </section>
   );
 }

@@ -1,15 +1,15 @@
 export default function Pricing() {
   return (
-    <section className="py-16 mt-20 bg-black bg-opacity-40 rounded-xl max-w-4xl mx-auto text-white text-center">
-      <h2 className="text-3xl font-bold mb-6">Тарифы и условия</h2>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-12 mt-8">
-        <div className="bg-white bg-opacity-80 text-gray-900 p-8 rounded-xl shadow-xl w-72 mb-6 md:mb-0 transition-transform hover:scale-105">
-          <h3 className="font-bold text-xl mb-2">Базовый</h3>
-          <p>Бесплатно — ведите аптечку, получайте напоминания и подсказки.</p>
+    <section className="py-10 px-6 text-center rounded-2xl shadow-lg bg-white bg-opacity-80 backdrop-blur">
+      <h2 className="text-xl font-bold mb-3 text-gray-700">Цены / тарифы / условия</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="bg-green-50 rounded-xl shadow p-6">
+          <h3 className="font-bold mb-1 text-green-700">Базовый</h3>
+          <p>Все функции для учёта и напоминаний — бесплатно</p>
         </div>
-        <div className="bg-green-400 bg-opacity-90 text-black p-8 rounded-xl shadow-xl w-72 transition-transform hover:scale-105">
-          <h3 className="font-bold text-xl mb-2">Премиум</h3>
-          <p>Локальные подсказки, интеграция с аптеками, расширенные семьи.</p>
+        <div className="bg-green-100 rounded-xl shadow p-6">
+          <h3 className="font-bold mb-1 text-green-800">Премиум</h3>
+          <p>Расширенные семейные функции, интеграции с аптекой — за подписку</p>
         </div>
       </div>
     </section>
