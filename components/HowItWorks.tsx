@@ -1,20 +1,14 @@
-export default function HowItWorks() {
+export default function Problem() {
   return (
-    <section className="py-16 mt-20 text-center bg-black bg-opacity-40 rounded-xl max-w-4xl mx-auto text-white">
-      <h2 className="text-3xl font-bold mb-6">Как это работает?</h2>
-      <div className="flex flex-col md:flex-row justify-center items-start gap-8">
-        <div className="bg-white bg-opacity-80 rounded-xl shadow-xl p-8 w-72 text-gray-800">
-          <h3 className="font-semibold mb-2 text-green-500">1. Сканируйте штрих‑код</h3>
-          <p className="text-sm">Препарат добавляется в аптечку с инструкцией и сроком годности.</p>
-        </div>
-        <div className="bg-white bg-opacity-80 rounded-xl shadow-xl p-8 w-72 text-gray-800">
-          <h3 className="font-semibold mb-2 text-green-500">2. Получайте напоминания</h3>
-          <p className="text-sm">Напоминания помогут не пропустить приём и купить новое вовремя.</p>
-        </div>
-        <div className="bg-white bg-opacity-80 rounded-xl shadow-xl p-8 w-72 text-gray-800">
-          <h3 className="font-semibold mb-2 text-green-500">3. Делитесь расписанием</h3>
-          <p className="text-sm">Семейный режим: совместное управление, подтверждение приёма.</p>
-        </div>
+    <section className="relative py-16 mt-20 max-w-4xl mx-auto rounded-xl shadow-xl overflow-hidden text-center">
+      <img
+        src="/christine-sandu-jwWtZrm67VI-unsplash.jpg"
+        alt="Blisters background"
+        className="absolute inset-0 w-full h-full object-cover brightness-95"
+        style={{ zIndex: 0 }}
+      />
+      <div className="relative z-10 bg-white bg-opacity-90 rounded-xl px-8 py-12">
+        {/* Весь твой контент тут: заголовок, списки, карточки... */}
       </div>
     </section>
   );
