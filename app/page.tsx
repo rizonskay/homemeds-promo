@@ -15,17 +15,14 @@ import Media from '../components/Media'
 export default function Home() {
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden">
-      {/* Фоновый слой, который скроллится вместе с содержимым */}
-      <div className="absolute inset-0 w-full h-full -z-10">
-        <img
-          src="/termometr-s-vysokoi-temperaturoi-i-lekarstvom.jpg"
-          alt="Background"
-          className="w-full h-full object-cover opacity-18"
-        />
-        {/* Белый overlay, чтобы фон был мягким и светлым */}
-        <div className="absolute inset-0 bg-white bg-opacity-60"></div>
-      </div>
-      {/* Контент-лендинг */}
+      {/* Фоновое изображение фиксируется на самом нижнем уровне */}
+      <img
+        src="/termometr-s-vysokoi-temperaturoi-i-lekarstvom.jpg"
+        alt="Background"
+        className="absolute inset-0 w-full h-full object-cover opacity-15 -z-10"
+        style={{ pointerEvents: 'none' }}
+      />
+      {/* Контент поверх */}
       <div className="relative z-10 flex flex-col gap-10 w-full max-w-4xl px-4 py-10 mx-auto">
         <Promo />
         <Problem />
