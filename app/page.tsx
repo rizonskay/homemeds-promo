@@ -14,15 +14,18 @@ import Media from '../components/Media'
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col items-center bg-gradient-to-b from-gray-50 via-white to-gray-100 overflow-x-hidden">
-      {/* Прокручиваемый фон на всю страницу */}
-      <img
-        src="/termometr-s-vysokoi-temperaturoi-i-lekarstvom.jpg"
-        alt="Medicine background"
-        className="absolute top-0 left-0 w-full h-full object-contain opacity-20 pointer-events-none z-0"
-        style={{ mixBlendMode: "lighten" }}
-      />
-      {/* Контент сайта */}
+    <div className="relative min-h-screen flex flex-col items-center overflow-x-hidden">
+      {/* Фон как отдельный div, чтобы точно был внизу */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <img
+          src="/termometr-s-vysokoi-temperaturoi-i-lekarstvom.jpg"
+          alt="Background image"
+          className="w-full h-full object-cover opacity-40"
+        />
+        {/* Можно добавить легкий overlay для затемнения, если фон слишком яркий */}
+        <div className="absolute inset-0 w-full h-full bg-white bg-opacity-20"></div>
+      </div>
+      {/* Контент поверх фонового изображения */}
       <div className="relative z-10 flex flex-col gap-10 w-full max-w-4xl px-4 py-10">
         <Promo />
         <Problem />
@@ -39,5 +42,5 @@ export default function Home() {
         <Media />
       </div>
     </div>
-  );
+  )
 }
