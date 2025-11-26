@@ -8,3 +8,10 @@ export default function Audience() {
         <li>Опекунам, родителям</li>
       </ul>
       <h3 className="font-bold text-xl mb-2 mt-8">Кому не подойдёт?</h3>
+      <ul className="max-w-xl mx-auto text-left list-disc ml-6 text-lg space-y-1">
+        <li>Тем, кто не пользуется мобильными приложениями</li>
+        <li>Тем, кто не готов сделать ревизию аптечки</li>
+      </ul>
+    </section>
+  );
+}
