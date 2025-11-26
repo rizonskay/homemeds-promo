@@ -14,14 +14,16 @@ import Media from '../components/Media'
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col items-center bg-gradient-to-b from-gray-50 via-white to-gray-100 overflow-hidden">
+    <div className="relative min-h-screen flex flex-col items-center bg-gradient-to-b from-gray-50 via-white to-gray-100 overflow-x-hidden">
+      {/* Прокручиваемый фон на всю страницу */}
       <img
         src="/termometr-s-vysokoi-temperaturoi-i-lekarstvom.jpg"
-        alt="Background"
-        className="absolute inset-0 w-full h-full object-contain opacity-20 pointer-events-none z-0"
-        style={{mixBlendMode:"lighten"}}
+        alt="Medicine background"
+        className="absolute top-0 left-0 w-full h-full object-contain opacity-20 pointer-events-none z-0"
+        style={{ mixBlendMode: "lighten" }}
       />
-      <div className="relative z-10 flex flex-col gap-10 w-full max-w-4xl px-4">
+      {/* Контент сайта */}
+      <div className="relative z-10 flex flex-col gap-10 w-full max-w-4xl px-4 py-10">
         <Promo />
         <Problem />
         <HowItWorks />
