@@ -12,4 +12,14 @@ export default function Features() {
           <p className="text-sm">Уведомления — никогда не забываете о приёме препарата.</p>
         </div>
         <div className="bg-white bg-opacity-80 rounded-xl shadow-xl p-8 text-gray-800">
-          <h3 className="font-semibold mb-2 text-green
+          <h3 className="font-semibold mb-2 text-green-500">Семейный режим</h3>
+          <p className="text-sm">Совместное управление и подтверждение приёма препаратов.</p>
+        </div>
+        <div className="bg-white bg-opacity-80 rounded-xl shadow-xl p-8 text-gray-800">
+          <h3 className="font-semibold mb-2 text-green-500">Безопасные аналоги</h3>
+          <p className="text-sm">Подсказки по действующему веществу и противопоказаниям.</p>
+        </div>
+      </div>
+    </section>
+  );
+}

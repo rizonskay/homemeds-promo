@@ -10,3 +10,12 @@ export default function HowItWorks() {
         <div className="bg-white bg-opacity-80 rounded-xl shadow-xl p-8 w-72 text-gray-800">
           <h3 className="font-semibold mb-2 text-green-500">2. Получайте напоминания</h3>
           <p className="text-sm">Напоминания помогут не пропустить приём и купить новое вовремя.</p>
+        </div>
+        <div className="bg-white bg-opacity-80 rounded-xl shadow-xl p-8 w-72 text-gray-800">
+          <h3 className="font-semibold mb-2 text-green-500">3. Делитесь расписанием</h3>
+          <p className="text-sm">Семейный режим: совместное управление, подтверждение приёма.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
