@@ -1,15 +1,15 @@
 export default function Promo() {
   return (
-    <section className="py-20 bg-black text-white text-center">
-      <h1 className="text-4xl font-extrabold mb-8">HomeMeds — умная домашняя аптечка</h1>
-      <p className="text-xl max-w-2xl mx-auto mb-6">
-        Приложение для учёта лекарств, сроков годности, курсов и напоминаний. Всё под контролем семьи!
+    <section className="py-32 px-4 bg-gradient-to-r from-green-400 via-blue-300 to-purple-400 text-white text-center rounded-xl shadow-xl max-w-4xl mx-auto mt-12">
+      <h1 className="text-5xl font-extrabold mb-8 drop-shadow-lg">HomeMeds</h1>
+      <p className="text-2xl max-w-2xl mx-auto mb-6 font-light">
+        Ваш помощник для безопасной и современной домашней аптечки
       </p>
       <a
         href="#"
-        className="inline-block px-8 py-4 bg-green-400 text-black font-bold rounded-lg hover:bg-green-500 transition"
+        className="inline-block px-10 py-5 bg-black bg-opacity-50 text-white font-bold rounded-3xl text-xl mt-4 shadow-lg transition hover:bg-opacity-90"
       >
-        Начать пользоваться
+        Попробовать бесплатно
       </a>
     </section>
   );
