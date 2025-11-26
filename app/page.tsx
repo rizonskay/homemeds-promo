@@ -8,14 +8,13 @@ import Testimonials from '../components/Testimonials'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-100 via-white to-green-400">
-      <Promo />
-      <Problem />
-      <HowItWorks />
-      <Audience />
-      <Features />
-      <Pricing />
-      <Testimonials />
-    </div>
-  )
-}
+    <div className="relative min-h-screen">
+      <img
+        src="/etactics-inc-nQ7bzOlfbRA-unsplash.jpg"
+        alt="background pills"
+        className="fixed inset-0 w-full h-full object-cover z-0 brightness-75"
+        style={{pointerEvents: 'none'}}
+      />
+      <div className="relative z-10">
+        <Promo />
+        <Problem />

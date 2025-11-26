@@ -1,15 +1,15 @@
-export default function Testimonials() {
+export default function Pricing() {
   return (
-    <section className="py-16 mt-20 bg-green-100 text-gray-900 text-center">
-      <h2 className="text-3xl font-bold mb-8">Отзывы пользователей</h2>
-      <div className="flex flex-col md:flex-row justify-center items-stretch gap-8">
-        <div className="bg-white rounded-xl shadow-xl p-8 max-w-xs mx-auto transition-transform hover:scale-105">
-          <p className="italic mb-3">«В аптечке всегда порядок, тратим меньше, ни разу не пропустили курс!»</p>
-          <div className="font-bold">Мария, мама двоих детей</div>
+    <section className="py-16 mt-20 bg-black bg-opacity-40 rounded-xl max-w-4xl mx-auto text-white text-center">
+      <h2 className="text-3xl font-bold mb-6">Тарифы и условия</h2>
+      <div className="flex flex-col md:flex-row justify-center items-center gap-12 mt-8">
+        <div className="bg-white bg-opacity-80 text-gray-900 p-8 rounded-xl shadow-xl w-72 mb-6 md:mb-0 transition-transform hover:scale-105">
+          <h3 className="font-bold text-xl mb-2">Базовый</h3>
+          <p>Бесплатно — ведите аптечку, получайте напоминания и подсказки.</p>
         </div>
-        <div className="bg-white rounded-xl shadow-xl p-8 max-w-xs mx-auto transition-transform hover:scale-105">
-          <p className="italic mb-3">«Сканируешь упаковку — всё само подсказывает. Очень удобно!»</p>
-          <div className="font-bold">Дмитрий, астматик</div>
+        <div className="bg-green-400 bg-opacity-90 text-black p-8 rounded-xl shadow-xl w-72 transition-transform hover:scale-105">
+          <h3 className="font-bold text-xl mb-2">Премиум</h3>
+          <p>Локальные подсказки, интеграция с аптеками, расширенные семьи.</p>
         </div>
       </div>
     </section>
