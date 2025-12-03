@@ -66,16 +66,34 @@ export default function Pricing() {
             </h3>
             <form
               className="space-y-3"
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
                 const form = e.currentTarget;
+                const formData = new FormData(form);
+                const name = String(formData.get("name") || "");
+                const email = String(formData.get("email") || "");
 
+                // Яндекс.Метрика: цель "lead-form-submit"
                 if (typeof window !== "undefined" && (window as any).ym) {
                   (window as any).ym(
                     105646224,
                     "reachGoal",
                     "lead-form-submit"
                   );
+                }
+
+                // Отправка в Google Sheets через Apps Script
+                try {
+                  await fetch(
+                    "https://script.google.com/macros/s/AKfycbwebxRz9VNHMnSQEO9V56PE5WUjkf3BOIK3owHPDpfytFiGRFey6X9OENJ8zxPQlGBU/exec",
+                    {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ name, email }),
+                    }
+                  );
+                } catch (err) {
+                  console.error("Ошибка отправки в Google Script", err);
                 }
 
                 form.reset();
