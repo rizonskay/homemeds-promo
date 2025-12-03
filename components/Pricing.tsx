@@ -83,16 +83,16 @@ export default function Pricing() {
                 }
 
                 try {
-                  // отправка как form-urlencoded, чтобы не было CORS-preflight
+                  // form-urlencoded без явного Content-Type, чтобы не было preflight
                   const body = new URLSearchParams();
                   body.append("name", name);
                   body.append("email", email);
 
                   await fetch(
-                    "https://script.google.com/macros/s/AKfycbzGOFLGyIPX3SU295FttX4XLiaEl_RBL0OTgwyQnl6VmkRILG2C0NAEUy3Fxi4fHkRRgA/exec",
+                    "https://script.google.com/macros/s/AKfycbwelswa_7O8vV2xfueLKHH9GFrzO7kakOb34vojObQ2sAiZKT2gFboVQInwRQ8mXAh1/exec",
                     {
                       method: "POST",
-                      body, // без явного Content-Type
+                      body,
                     }
                   );
                 } catch (err) {
