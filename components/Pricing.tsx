@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function Pricing() {
   const [showForm, setShowForm] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   return (
     <section
@@ -68,12 +69,14 @@ export default function Pricing() {
               className="space-y-3"
               onSubmit={async (e) => {
                 e.preventDefault();
+                if (isSubmitting) return; // защита от повторных кликов
+
+                setIsSubmitting(true);
                 const form = e.currentTarget;
                 const formData = new FormData(form);
                 const name = String(formData.get("name") || "");
                 const email = String(formData.get("email") || "");
 
-                // цель Яндекс.Метрики
                 if (typeof window !== "undefined" && (window as any).ym) {
                   (window as any).ym(
                     105646224,
@@ -83,7 +86,6 @@ export default function Pricing() {
                 }
 
                 try {
-                  // form-urlencoded без явного Content-Type, чтобы не было preflight
                   const body = new URLSearchParams();
                   body.append("name", name);
                   body.append("email", email);
@@ -101,6 +103,7 @@ export default function Pricing() {
 
                 form.reset();
                 setShowForm(false);
+                setIsSubmitting(false);
                 alert("Спасибо! Мы сообщим, когда HomeMeds будет доступен.");
               }}
             >
@@ -110,6 +113,7 @@ export default function Pricing() {
                 placeholder="Имя"
                 className="w-full border border-gray-400 rounded-xl px-3 py-2 text-sm bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
+                disabled={isSubmitting}
               />
               <input
                 type="email"
@@ -117,18 +121,27 @@ export default function Pricing() {
                 placeholder="Email"
                 className="w-full border border-gray-400 rounded-xl px-3 py-2 text-sm bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
+                disabled={isSubmitting}
               />
               <div className="flex gap-3 mt-2">
                 <button
                   type="submit"
-                  className="flex-1 px-4 py-3 bg-green-600 text-white font-semibold rounded-2xl text-sm hover:bg-green-700 transition"
+                  disabled={isSubmitting}
+                  className={`flex-1 px-4 py-3 rounded-2xl text-sm font-semibold text-white transition ${
+                    isSubmitting
+                      ? "bg-green-400 cursor-wait"
+                      : "bg-green-600 hover:bg-green-700"
+                  }`}
                 >
-                  Получить доступ к HomeMeds
+                  {isSubmitting ? "Отправка..." : "Получить доступ к HomeMeds"}
                 </button>
                 <button
                   type="button"
                   className="px-4 py-3 bg-gray-200 text-gray-700 font-semibold rounded-2xl text-sm hover:bg-gray-300 transition"
-                  onClick={() => setShowForm(false)}
+                  onClick={() => {
+                    if (isSubmitting) return;
+                    setShowForm(false);
+                  }}
                 >
                   Отмена
                 </button>
