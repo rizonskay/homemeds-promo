@@ -59,7 +59,7 @@ export default function Pricing() {
 
       {/* Модальное окно с формой */}
       {showForm && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
           <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl px-6 py-6 text-left">
             <h3 className="text-lg font-bold text-gray-800 mb-2">
               Оставьте контакты - пришлём доступ, когда продукт будет готов
@@ -87,14 +87,14 @@ export default function Pricing() {
                 type="text"
                 name="name"
                 placeholder="Имя"
-                className="w-full border border-gray-400 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"
+                className="w-full border border-gray-400 rounded-xl px-3 py-2 text-sm bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
               />
               <input
                 type="email"
                 name="email"
                 placeholder="Email"
-                className="w-full border border-gray-400 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"
+                className="w-full border border-gray-400 rounded-xl px-3 py-2 text-sm bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
                 required
               />
               <div className="flex gap-3 mt-2">
