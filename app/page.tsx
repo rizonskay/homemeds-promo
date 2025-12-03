@@ -15,16 +15,15 @@ import Media from "../components/Media";
 export default function Home() {
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden">
-      {/* Фон с картинкой на всю страницу */}
-      <div className="absolute inset-0 w-full h-full -z-10">
-        <img
-          src="/termometr-s-vysokoi-temperaturoi-i-lekarstvom.jpg"
-          alt="Background"
-          className="w-full h-full object-cover opacity-18"
-        />
-        <div className="absolute inset-0 bg-white bg-opacity-20" />
-      </div>
+      {/* Фоновое изображение на всю страницу */}
+      <img
+        src="/termometr-s-vysokoi-temperaturoi-i-lekarstvom.jpg"
+        alt="Фон домашней аптечки"
+        className="absolute inset-0 w-full h-full object-cover opacity-25 -z-10"
+        style={{ pointerEvents: "none" }}
+      />
 
+      {/* Контент лендинга */}
       <div className="relative z-10 flex flex-col gap-10 w-full max-w-4xl px-4 py-10 mx-auto">
         <Promo />
         <Problem />
