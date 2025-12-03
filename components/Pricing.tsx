@@ -7,24 +7,38 @@ export default function Pricing() {
       <h2 className="text-2xl font-bold mb-6 text-gray-800">
         Цены, тарифы и условия
       </h2>
+
       <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch max-w-3xl mx-auto">
-        <div className="flex-1 bg-white rounded-xl shadow px-7 py-6">
+        {/* Базовый тариф */}
+        <div className="flex-1 bg-white rounded-xl shadow px-7 py-6 flex flex-col">
           <h3 className="text-lg font-bold text-green-700 mb-1">Базовый</h3>
           <p className="text-gray-700 mb-3">Бесплатно, без ограничений по времени</p>
-          <ul className="text-left list-disc ml-5 text-gray-600 text-sm space-y-1">
+          <ul className="text-left list-disc ml-5 text-gray-600 text-sm space-y-1 mb-4">
             <li>Учёт всей домашней аптечки.</li>
             <li>Напоминания о приёмах и сроках годности.</li>
             <li>Список "докупить" и подсказки по утилизации.</li>
           </ul>
+          <div className="mt-auto">
+            <button className="w-full px-4 py-3 bg-green-500 text-white font-semibold rounded-2xl text-sm hover:bg-green-600 transition">
+              Попробовать бесплатно
+            </button>
+          </div>
         </div>
-        <div className="flex-1 bg-green-50 rounded-xl shadow px-7 py-6">
+
+        {/* Премиум тариф */}
+        <div className="flex-1 bg-green-50 rounded-xl shadow px-7 py-6 flex flex-col">
           <h3 className="text-lg font-bold text-green-900 mb-1">Премиум</h3>
           <p className="text-gray-700 mb-3">Подписка для семей и опекунов</p>
-          <ul className="text-left list-disc ml-5 text-gray-600 text-sm space-y-1">
+          <ul className="text-left list-disc ml-5 text-gray-600 text-sm space-y-1 mb-4">
             <li>Отдельные профили для родственников.</li>
             <li>Совместный доступ: видно, кто принял лекарство.</li>
             <li>Расширенные подсказки по заменам и наборам.</li>
           </ul>
+          <div className="mt-auto">
+            <button className="w-full px-4 py-3 bg-green-600 text-white font-semibold rounded-2xl text-sm hover:bg-green-700 transition">
+              Оформить подписку
+            </button>
+          </div>
         </div>
       </div>
     </section>
