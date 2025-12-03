@@ -1,15 +1,19 @@
 export default function Promo() {
   return (
-    <section className="py-14 px-6 text-center rounded-2xl shadow-lg bg-white bg-opacity-80 backdrop-blur">
-      <h1 className="text-4xl font-bold mb-6 text-gray-800">HomeMeds — умная домашняя аптечка</h1>
+    <section className="py-16 px-6 text-center rounded-2xl shadow-lg bg-white bg-opacity-85 backdrop-blur">
+      <h1 className="text-4xl font-bold mb-6 text-gray-800">
+        HomeMeds — умная домашняя аптечка
+      </h1>
       <p className="text-xl max-w-3xl mx-auto mb-8 text-gray-600">
-        Стартап-решение для учёта медикаментов, сроков и курсов с умными функциями, напоминаниями, безопасными заменами и семейными режимами.
+        Здесь решают вечный бардак в домашней аптечке. HomeMeds помогает не держать
+        всё «в голове»: приложение помнит, какие лекарства у вас есть, когда у них
+        заканчивается срок годности и кому из семьи что нужно пить и когда.
       </p>
       <a
-        href="#"
-        className="inline-block px-10 py-5 bg-green-500 text-white font-bold rounded-3xl text-lg mt-2 shadow hover:bg-green-600 transition"
+        href="#pricing"
+        className="inline-block px-10 py-4 bg-green-500 text-white font-bold rounded-3xl text-lg shadow hover:bg-green-600 transition"
       >
-        Попробовать бесплатно
+        Навести порядок в аптечке
       </a>
     </section>
   );
