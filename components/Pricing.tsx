@@ -1,3 +1,5 @@
+"use client";
+
 export default function Pricing() {
   return (
     <section
@@ -12,7 +14,9 @@ export default function Pricing() {
         {/* Базовый тариф */}
         <div className="flex-1 bg-white rounded-xl shadow px-7 py-6 flex flex-col">
           <h3 className="text-lg font-bold text-green-700 mb-1">Базовый</h3>
-          <p className="text-gray-700 mb-3">Бесплатно, без ограничений по времени</p>
+          <p className="text-gray-700 mb-3">
+            Бесплатно, без ограничений по времени
+          </p>
           <ul className="text-left list-disc ml-5 text-gray-600 text-sm space-y-1 mb-4">
             <li>Учёт всей домашней аптечки.</li>
             <li>Напоминания о приёмах и сроках годности.</li>

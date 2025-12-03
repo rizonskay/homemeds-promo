@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "HomeMeds - умная домашняя аптечка",
-  description: "Приложение для учёта домашней аптечки и напоминаний о приёме лекарств.",
+  description:
+    "Приложение для учёта домашней аптечки и напоминаний о приёме лекарств.",
 };
 
 export default function RootLayout({
