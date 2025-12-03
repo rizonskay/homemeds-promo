@@ -69,7 +69,7 @@ export default function Pricing() {
               className="space-y-3"
               onSubmit={async (e) => {
                 e.preventDefault();
-                if (isSubmitting) return; // защита от повторных кликов
+                if (isSubmitting) return;
 
                 setIsSubmitting(true);
                 const form = e.currentTarget;
@@ -91,7 +91,7 @@ export default function Pricing() {
                   body.append("email", email);
 
                   await fetch(
-                    "https://script.google.com/macros/s/AKfycbwelswa_7O8vV2xfueLKHH9GFrzO7kakOb34vojObQ2sAiZKT2gFboVQInwRQ8mXAh1/exec",
+                    "https://script.google.com/macros/s/AKfycby2P2YEabnTHl11to7MQ-Y7toazgXwffsXPJdIzSWxUtpb7lEDDaeCSXtlky2xarQVdWw/exec",
                     {
                       method: "POST",
                       body,
