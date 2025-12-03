@@ -73,7 +73,7 @@ export default function Pricing() {
                 const name = String(formData.get("name") || "");
                 const email = String(formData.get("email") || "");
 
-                // Яндекс.Метрика: цель "lead-form-submit"
+                // цель Яндекс.Метрики
                 if (typeof window !== "undefined" && (window as any).ym) {
                   (window as any).ym(
                     105646224,
@@ -82,14 +82,17 @@ export default function Pricing() {
                   );
                 }
 
-                // Отправка в Google Sheets через Apps Script
                 try {
+                  // отправка как form-urlencoded, чтобы не было CORS-preflight
+                  const body = new URLSearchParams();
+                  body.append("name", name);
+                  body.append("email", email);
+
                   await fetch(
-                    "https://script.google.com/macros/s/AKfycbwebxRz9VNHMnSQEO9V56PE5WUjkf3BOIK3owHPDpfytFiGRFey6X9OENJ8zxPQlGBU/exec",
+                    "https://script.google.com/macros/s/AKfycbzGOFLGyIPX3SU295FttX4XLiaEl_RBL0OTgwyQnl6VmkRILG2C0NAEUy3Fxi4fHkRRgA/exec",
                     {
                       method: "POST",
-                      headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({ name, email }),
+                      body, // без явного Content-Type
                     }
                   );
                 } catch (err) {
