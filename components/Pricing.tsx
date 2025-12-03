@@ -14,7 +14,7 @@ export default function Pricing() {
           <ul className="text-left list-disc ml-5 text-gray-600 text-sm space-y-1">
             <li>Учёт всей домашней аптечки.</li>
             <li>Напоминания о приёмах и сроках годности.</li>
-            <li>Список «докупить» и подсказки по утилизации.</li>
+            <li>Список "докупить" и подсказки по утилизации.</li>
           </ul>
         </div>
         <div className="flex-1 bg-green-50 rounded-xl shadow px-7 py-6">
