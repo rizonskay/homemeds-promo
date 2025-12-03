@@ -1,6 +1,10 @@
 "use client";
 
+import { useState } from "react";
+
 export default function Pricing() {
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <section
       id="pricing"
@@ -23,14 +27,13 @@ export default function Pricing() {
             <li>Список "докупить" и подсказки по утилизации.</li>
           </ul>
           <div className="mt-auto">
-            <a href="#homemeds-lead-form">
-              <button
-                type="button"
-                className="w-full px-4 py-3 bg-green-500 text-white font-semibold rounded-2xl text-sm hover:bg-green-600 transition"
-              >
-                Попробовать бесплатно
-              </button>
-            </a>
+            <button
+              type="button"
+              className="w-full px-4 py-3 bg-green-500 text-white font-semibold rounded-2xl text-sm hover:bg-green-600 transition"
+              onClick={() => setShowForm(true)}
+            >
+              Попробовать бесплатно
+            </button>
           </div>
         </div>
 
@@ -54,53 +57,68 @@ export default function Pricing() {
         </div>
       </div>
 
-      {/* Форма заявки на продукт */}
-      <div
-        id="homemeds-lead-form"
-        className="mt-10 max-w-md mx-auto text-left"
-      >
-        <h3 className="text-lg font-bold text-gray-800 mb-2">
-          Оставьте контакты - пришлём доступ, когда продукт будет готов
-        </h3>
-        <form
-          className="space-y-3"
-          onSubmit={(e) => {
-            e.preventDefault();
-            const form = e.currentTarget;
+      {/* Модальное окно с формой */}
+      {showForm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+          <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl px-6 py-6 text-left">
+            <h3 className="text-lg font-bold text-gray-800 mb-2">
+              Оставьте контакты - пришлём доступ, когда продукт будет готов
+            </h3>
+            <form
+              className="space-y-3"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const form = e.currentTarget;
 
-            if (typeof window !== "undefined" && (window as any).ym) {
-              (window as any).ym(105646224, "reachGoal", "lead-form-submit");
-            }
+                if (typeof window !== "undefined" && (window as any).ym) {
+                  (window as any).ym(
+                    105646224,
+                    "reachGoal",
+                    "lead-form-submit"
+                  );
+                }
 
-            form.reset();
-            alert("Спасибо! Мы сообщим, когда HomeMeds будет доступен.");
-          }}
-        >
-          <input
-            type="text"
-            name="name"
-            placeholder="Имя"
-            className="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            className="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
-          <button
-            type="submit"
-            className="w-full px-4 py-3 bg-green-600 text-white font-semibold rounded-2xl text-sm hover:bg-green-700 transition"
-          >
-            Получить доступ к HomeMeds
-          </button>
-        </form>
-        <p className="mt-2 text-xs text-gray-500">
-          Никакого спама - только сообщение о запуске и, возможно, ранний доступ.
-        </p>
-      </div>
+                form.reset();
+                setShowForm(false);
+                alert("Спасибо! Мы сообщим, когда HomeMeds будет доступен.");
+              }}
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Имя"
+                className="w-full border border-gray-400 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                className="w-full border border-gray-400 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"
+                required
+              />
+              <div className="flex gap-3 mt-2">
+                <button
+                  type="submit"
+                  className="flex-1 px-4 py-3 bg-green-600 text-white font-semibold rounded-2xl text-sm hover:bg-green-700 transition"
+                >
+                  Получить доступ к HomeMeds
+                </button>
+                <button
+                  type="button"
+                  className="px-4 py-3 bg-gray-200 text-gray-700 font-semibold rounded-2xl text-sm hover:bg-gray-300 transition"
+                  onClick={() => setShowForm(false)}
+                >
+                  Отмена
+                </button>
+              </div>
+            </form>
+            <p className="mt-2 text-xs text-gray-500">
+              Никакого спама - только сообщение о запуске и, возможно, ранний доступ.
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
