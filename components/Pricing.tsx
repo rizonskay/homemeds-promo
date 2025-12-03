@@ -19,17 +19,14 @@ export default function Pricing() {
             <li>Список "докупить" и подсказки по утилизации.</li>
           </ul>
           <div className="mt-auto">
-            <button
-              type="button"
-              className="w-full px-4 py-3 bg-green-500 text-white font-semibold rounded-2xl text-sm hover:bg-green-600 transition"
-              onClick={() =>
-                document
-                  .getElementById("homemeds-lead-form")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              Попробовать бесплатно
-            </button>
+            <a href="#homemeds-lead-form">
+              <button
+                type="button"
+                className="w-full px-4 py-3 bg-green-500 text-white font-semibold rounded-2xl text-sm hover:bg-green-600 transition"
+              >
+                Попробовать бесплатно
+              </button>
+            </a>
           </div>
         </div>
 
@@ -67,7 +64,6 @@ export default function Pricing() {
             e.preventDefault();
             const form = e.currentTarget;
 
-            // Цель Яндекс.Метрики
             if (typeof window !== "undefined" && (window as any).ym) {
               (window as any).ym(105646224, "reachGoal", "lead-form-submit");
             }
