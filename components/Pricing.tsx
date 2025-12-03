@@ -91,7 +91,7 @@ export default function Pricing() {
                   body.append("email", email);
 
                   await fetch(
-                    "https://script.google.com/macros/s/AKfycby2P2YEabnTHl11to7MQ-Y7toazgXwffsXPJdIzSWxUtpb7lEDDaeCSXtlky2xarQVdWw/exec",
+                    "https://script.google.com/macros/s/AKfycbzSu1GTXSSRZoCrdY8m3Az7r-0BFxgyIFs3BNlVnQT8rBWpCskGJTu0fmUic89P3KuK/exec",
                     {
                       method: "POST",
                       body,
